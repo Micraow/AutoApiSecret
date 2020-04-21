@@ -1,135 +1,123 @@
-# AutoApiSecret-加密版
+# AutoApiSecret - Encrypted Edition
 
-AutoApi系列：AutoApi、AutoApiSecret、AutoApiSR、AutoApiS
+# forked from https://github.com/wangziyingwen/AutoApiSecret
+AutoAPI Series: AutoAPI, AutoApiSecret, AutoApiSR, AutoAPIS
 
-# 置顶 #
-* 本项目是建立在[原教程](https://blog.432100.xyz/index.php/archives/50/)可以正确调用api的**假设**上的，核心是paran/黑幕大佬的py脚本。
-* 本项目只是提供一个自动、免费、无需额外设备的脚本运行方式，换句话说，**就是一台机子**。（因为原教程需要服务器/超长时间运转的设备，大部分人都不具备，本项目应运而生）
-* 请务必先阅读理解[原教程](https://blog.432100.xyz/index.php/archives/50/)的**原理说明、设计理念**。
-* 搬运[原教程](https://blog.432100.xyz/index.php/archives/50/)说法：**不保证一定能续期！不保证一定能续期！不保证一定能续期**！或者说，**只是增大续订可能性**。
-* 若理解并接受上述说明，请接着操作；**若否，请点击浏览器右上角 X 。**
+- Top #
+This project is based on the py script of the paran/black man that can correctly call the api on the "assumptions" of the original tutorial (https://blog.432100.xyz/index.php/archives/50/).
+This project simply provides an automatic, free, script-free operation without additional equipment, in other words, a machine. (Because the original tutorial required servers/ultra-long-running equipment that most people don't have, this project came into being)
+Be sure to read the principle snotation notes and design concepts for understanding the original tutorial (https://blog.432100.xyz/index.php/archives/50/).
+:: Carrying the original tutorial (https://blog.432100.xyz/index.php/archives/50/) says: there is no guarantee of renewal! There is no guarantee that it will be renewed! There is no guarantee that we will be able to renew it! Or rather, just increase the likelihood of renewal.
+If you understand and accept the above instructions, please proceed; **
 
-### 项目说明 ###
-* 利用github action实现**定时自动调用api**，保持E5开发活跃。
-* **免费，不需要额外设备/服务器**，部署完不用管啦。
-* 加密版，隐藏应用id+机密，保护账号安全。
+Description of the project ###
+:: Use github action to implement the time-timed automatic call api, to keep E5 development active.
+:: Free, no additional equipment/servers required, deployed without care.
+:: Encrypted version, hide the application id plus secret, protect the account security.
 
-### 特别说明/Thanks ###
-* 原教程博主-黑幕（酷安id-Paran）：https://blog.432100.xyz/index.php/archives/50/
-* 普通版地址：https://github.com/wangziyingwen/AutoApi
-* 加密版地址：https://github.com/wangziyingwen/AutoApiSecret
-* 模仿人为应用开发版（包含升级步骤）：https://github.com/wangziyingwen/AutoApiSR
-* 超级版地址（测试)： https://github.com/wangziyingwen/AutoApiS
-* 更新日志：https://github.com/wangziyingwen/Autoapi-test
-* 网页获取refresh_token小工具（不建议使用）：https://github.com/wangziyingwen/GetAutoApiToken
-* 视频教程：（我操作很慢，自行倍速/快进）
-   * 在线/下载地址：https://kino-onemanager.herokuapp.com/Video/AutoApi%E6%95%99%E7%A8%8B.mp4?preview
-   * B站：https://www.bilibili.com/video/av95688306/
+Special Notes/Thanks ###
+:: Original tutorial blogger-black-screen (Coolend-Paran): https://blog.432100.xyz/index.php/archives/50/
+:: General Address: https://github.com/wangziyingwen/AutoAPI
+:: Encrypted Address: https://github.com/wangziyingwen/AutoApiSecret
+:: Imitation Artificial Application Development (includes upgrade steps): https://github.com/wangziyingwen/AutoApiSR
+:: Super Address (Test): https://github.com/wangziyingwen/AutoApiS
+:: Update log: https://github.com/wangziyingwen/Autoapi-test
+:: Web getrefresh_token gadgets (not recommended): https://github.com/wangziyingwen/GetAutoApiToken
+:: Video tutorial: (I'm slow to operate, self-double/fast-forward)
+   :: preview online/download address: https://kino-onemanager.herokuapp.com/video/AutoApi%95% 99%99%A8%8B.mp4??
+   Station B: https://www.bilibili.com/video/av95688306/
            
 
-### 区别 ###
-   项目用的是公共仓库（开放代码），所有人都能看到你的代码内容。
+The difference ###
+   The project uses a public warehouse (open code) and everyone can see your code content.
 
-   所以你的应用id、机密、令牌都会显示出来，不安全。
+   So your app id, secret, token will be displayed, not secure.
 
-   加密版，我把应用id、机密都隐藏了，令牌因为需要实时更新，隐藏不了（我不会！），安全性会高很多！
+   Encrypted version, I put the application id, secrets are hidden, tokenbecause of the need to update in real time, can not hide (I will not!) ), much more secure!
    
-   模仿人为应用开发版，顾名思义。
+   Imitating the artificial application development version, as the name implies.
    
 --------------------------------------------------------------
 
-### 步骤 ###
-* 第一步，先大致浏览[原教程](https://blog.432100.xyz/index.php/archives/50/)，了解如何获取应用id、机密、refresh_token 3样东西，以方便接下来的操作。
+Steps ###
+The first step is to get a quick look at the original tutorial (https://blog.432100.xyz/index.php/archives/50//) to learn how to get the app id, secret, refresh_token 3 things to facilitate the next step.
 
-* 第二步，登陆/新建github账号，回到本项目页面，点击右上角fork本项目的代码到你自己的账号，然后你账号下会出现一个一模一样的项目，接下来的操作均在你的这个项目下进行。
+The second step, log in/create a new github account, go back to this project page, click on the code for the fork project in the upper right corner to your own account, and then you will have a identical project under your account, the next action is under your project.
 
-  ![image](https://github.com/wangziyingwen/ImageHosting/blob/master/AutoApi/fork.png)
+  ! (image) (https://github.com/wangziyingwen/ImageHosting/blob/master/AutoApi/fork.png)
   
-* 根据[原教程](https://blog.432100.xyz/index.php/archives/50/)获取应用id、机密、refresh_token（自己复制保存，注意区分id机密，别弄混了）
+:: Get app id, secret, refresh_token (copy and save yourself, pay attention to distinguishing id secrets, don't mix) according to the original tutorial (https://blog.432100.xyz/index.php/archives/50/)
    
-  然后在线编辑你项目里的1.txt，将整个refresh_token覆盖粘贴进去（里面是我的数据，先删掉或者覆盖掉）。（千万不要改1.py）
+  Then edit 1.txt in your project online and paste the entire refresh_token overlay (it's my data, delete or overwrite it first). (Don't change 1.py)
   
-    > refresh_token位置如图下。复制refresh_token紧接着的双引号里的内容（红竖线框起来的），不要把双引号复制进去。复制进1.txt后，留意结尾不要留空格或者空行
+    The refresh_token position is shown below. Copy the contents of the double quotes immediately following the refresh_token (red vertical box), do not copy the double quotes into it. After copying into 1.txt, be careful not to leave spaces or empty lines at the end
      
-    ![image](https://github.com/wangziyingwen/ImageHosting/blob/master/AutoApi/token地方.png)
+    ! (image) (https://github.com/wangziyingwen/Imagehosting/blob/master/AutoApi/tokenlocal.png)
   
-* 第三步，依次点击上栏Setting > Secrets > Add a new secret，新建两个secret如图：CONFIG_ID、CONFIG_KEY。
+In the third step, click on the upper column Settings and Secrets and Add a new secret to create two new secrets: CONFIG_ID, CONFIG_KEY.
 
-  内容分别如下: ( 把你的应用id改成你的应用id , 你的应用机密改成你的机密，单引号不要动 )
+  The content is as follows: ( (change your app id to your app id, your app secret change to your secret, single quote do not move)
   
   CONFIG_ID
-  ```shell
-  id=r'你的应用id'
+  ''Shell'
+  id'r's your app id'
   ```
   CONFIG_KEY
-  ```shell
-  secret=r'你的应用机密'
+  ''Shell'
+  'Your App Confidential'
   ```
-  ![image](https://github.com/wangziyingwen/ImageHosting/blob/master/AutoApi/机密.png)
+  ! (image) (https://github.com/wangziyingwen/Imagehosting/blob/master/AutoAPI/confidential.png)
   
-  最终格式应该是类似这样的：
+  The final format should look something like this:
   
-  ![image](https://github.com/wangziyingwen/ImageHosting/blob/master/AutoApi/格式.png)
+  ! (image) (https://github.com/wangziyingwen/Imagehosting/blob/master/AutoAPI/format.png)
   
-* 第四步，进入你的个人设置页面(右上角头像 Settings，不是仓库里的 Settings)，选择 Developer settings > Personal access tokens > Generate new token,
+:: Step 4, go to your personal settings page (top right picture settings, not Settings in the warehouse), select Developer Settings , Personal Access tokens and Generate new tokens,
 
-  ![image](https://github.com/wangziyingwen/ImageHosting/blob/master/AutoApi/Settings.png)
-  ![image](https://github.com/wangziyingwen/ImageHosting/blob/master/AutoApi/token.png)
+  ! (image) (https://github.com/wangziyingwen/ImageHosting/blob/master/AutoApi/Settings.png)
+  ! (image) (https://github.com/wangziyingwen/ImageHosting/blob/master/AutoApi/token.png)
 
-  设置名字为GITHUB_TOKEN , 然后勾选 repo , admin:repo_hook , workflow 等选项，最后点击Generate token即可。
+  Set the name to GITHUB_TOKEN, then check the options of repo, admin:repo_hook, workflow, and finally click Generate token.
   
-  ![image](https://github.com/wangziyingwen/ImageHosting/blob/master/AutoApi/repo.png)
-  ![image](https://github.com/wangziyingwen/ImageHosting/blob/master/AutoApi/adminrepo.png)
-  ![image](https://github.com/wangziyingwen/ImageHosting/blob/master/AutoApi/workflow.png)
+  ! (image) (https://github.com/wangziyingwen/ImageHosting/blob/master/AutoApi/repo.png)
+  ! (image) (https://github.com/wangziyingwen/ImageHosting/blob/master/AutoApi/adminrepo.png)
+  ! (image) (https://github.com/wangziyingwen/ImageHosting/blob/master/AutoApi/workflow.png)
   
-* 第五步，点击右上角星星/star立马调用一次，再点击上面的Action就能看到每次的运行日志，看看运行状况
+Step 5, click on the top right corner star/star call immediately once, and then click on the action above to see each run log, see the health
 
-（必需点进去Test Api看下，api有没有调用到位，有没有出错。外面的Auto Api打勾只能说明运行是正常的，我们还需要确认10个api调用成功了，就像图里的一样。如果少了几个api，要么是注册应用的时候赋予api权限没弄好；要么是没登录激活onedrive，登录激活一下）
+(Need to point in the Test API to see if the api is in place and there is no error.) The outside Auto Api ticking only means that the operation is normal, and we need to confirm that 10 API calls were successful, as in the diagram. If a few apiis is missing, either the api permission is not good when you register the app, or you are not logged in to activate onedrive, login activation)
 
-  ![image](https://github.com/wangziyingwen/ImageHosting/blob/master/AutoApi/日志.png)
+  ! (image) (https://github.com/wangziyingwen/Imagehosting/blob/master/AutoAPI/log.png)
 
-* 第六步，没出错的话，就搞定啦！！再看看下面的定时次数要不要修改，不打算改就不用管了。
+Step 6, if you don't make any mistakes, you'll get it done! ! Look at the following number of timings to modify, do not intend to change it without mind.
 
-  我设定的每小时自动运行一次，每次调用3轮（点击右上角星星/star也可以立马调用一次），你们自行斟酌修改（我也不知道保持活跃要调用多少次、多久）：
+  I set it to run automatically every hour, calling 3 rounds at a time (click on the star/star in the upper right corner can also call once), and you modify it yourself (I don't know how many times and how long to stay active):
 
-  * 定时自动启动修改地方：（在.github/workflow/AutoApiSecret.yml文件里，自行百度cron定时任务格式，最短每5分钟一次）
+  :: Timed auto-start modification place: (in the .github/workflow/AutoApiSecret.yml file, self-drive cron timing task format, minimum every 5 minutes)
    
-  ![image](https://github.com/wangziyingwen/ImageHosting/blob/master/AutoApi/定时.png)
+  ! (image) (https://github.com/wangziyingwen/Imagehosting/blob/master/AutoAPI/timed.png)
    
-  * 每次轮数修改地方：（在1.py最后面）
-   
-  ![image](https://github.com/wangziyingwen/ImageHosting/blob/master/AutoApi/次数.png)
+  :: Where the number of rounds is modified: (at the last end of 1.py)   
+  ! (image) (https://github.com/wangziyingwen/Imagehosting/blob/master/AutoAPI/times.png)
   
 ------------------------------------------------------------
-### 题外话 ###
-> Api调用
-  你们可以自己去graph浏览器看一下，学着自己修改要调用什么api(最重要的是调用outlook、onedrive)
+The outside story ###
+The API call
+  You can go to the graph browser yourself and learn to modify what api to call (the most important thing is to call outlook, onedrive)
   https://developer.microsoft.com/zh-CN/graph/graph-explorer/preview
 
-### GithubAction介绍 ###
-提供的虚拟环境：
+Introduction to GithubAction ###
+Virtual environments provided:
 
 · 2-core CPU
-· 7 GB RAM 内存
-· 14 GB SSD 硬盘空间
+· 7 GB RAM
+· 14 GB SSD hard drive space
 
-使用限制：
-* 每个仓库只能同时支持20个 workflow 并行。
-* 每小时可以调用1000次 GitHub API 。
-* 每个 job 最多可以执行6个小时。
-* 免费版的用户最大支持20个 job 并发执行，macOS 最大只支持5个。
-* 私有仓库每月累计使用时间为2000分钟，超过后$ 0.008/分钟，公共仓库则无限制。
+Restrictions on use:
+Each warehouse can only support 20 workflow parallels at the same time.
+The GitHub API can be called 1000 times per hour.
+Each job can be executed for up to 6 hours.
+The free version of the user supports up to 20 job concurrent execution, macOS supports a maximum of 5.
+The cumulative monthly usage time of private warehouses is 2000 minutes, after which $0.008/min, and public warehouses are unlimited.
 
-（我们这里用的公共仓库，按理，你们可以设定无限循环调用，然后6小时启动一次，保证24小时全天候调用）
-
-### 最后 ###
-  教程很直白了，应该都会弄吧！
-  
-  代码小白，多包涵！有问题/修改建议可以点击上方issues发布一下，或者PY给我:
-  wz.lxh@outlook.com
-  
-  建了个Q群：657581700，不过没人
-  
-  最后的最后，再次感谢黑幕/paran大佬
-  
-  ————wangziyingwen/酷安id-卷腿毛菌
+(We use the public warehouse here, by reason, you can set the infinite loop call, and then start it once in 6 hours, guaranteed to call 24 hours a day.
